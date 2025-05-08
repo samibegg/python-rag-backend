@@ -16,9 +16,5 @@
       "dest": "main.py"
     }
   ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key_secret",
-    "HUGGING_FACE_HUB_TOKEN": "@hf_token_secret"
-  }
 }
 
