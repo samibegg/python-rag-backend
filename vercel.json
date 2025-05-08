@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py", // Your main FastAPI application file
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb", // Adjust if your dependencies + code are larger
+        "runtime": "python3.12"  // Or python3.9, python3.12 (check Vercel supported runtimes)
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", // Route all requests to the FastAPI app
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key_secret",
+    "HUGGING_FACE_HUB_TOKEN": "@hf_token_secret"
+  }
+}
+

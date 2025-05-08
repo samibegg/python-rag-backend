@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard] # For local development server, 'standard' includes websockets and other goodies
+python-dotenv
+openai>=1.0
+huggingface_hub>=0.20
+sentence-transformers
+faiss-cpu
+numpy
+Pydantic
+python-multipart # For FastAPI file uploads
+
