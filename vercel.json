@@ -2,17 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "main.py", // Your main FastAPI application file
+      "src": "main.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "50mb", // Adjust if your dependencies + code are larger
-        "runtime": "python3.12"  // Or python3.9, python3.12 (check Vercel supported runtimes)
+        "maxLambdaSize": "50mb", 
+        "runtime": "python3.12"  
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", // Route all requests to the FastAPI app
+      "src": "/(.*)", 
       "dest": "main.py"
     }
   ],
